@@ -23,6 +23,8 @@ BaselineOfSuedtirolMobilClient class >> loadLepiter [
 BaselineOfSuedtirolMobilClient >> baseline: spec [
 	<baseline>
 		^ spec for: #common do: [
-			spec package: 'SuedtirolMobilClient'
+			spec package: 'SuedtirolMobilClient'.
+			spec package: 'SuedtirolMobilClient-Api'.
+			spec package: 'SuedtirolMobilClient-Entity'
 		]
 ]
