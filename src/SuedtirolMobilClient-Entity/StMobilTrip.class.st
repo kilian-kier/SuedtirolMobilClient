@@ -26,6 +26,16 @@ StMobilTrip >> duration: anObject [
 	duration := Duration minutes: split first asNumber * 60 + split second asNumber
 ]
 
+{ #category : #actions }
+StMobilTrip >> gtOrderAction: anAction [
+	<gtAction>
+	^ anAction button
+		tooltip: 'Order this trip (TODO: better icon)';
+		priority: 1;
+		icon: BrGlamorousIcons accept;
+		action: [ :aButton | aButton phlow spawnObject: (self client orderTrip: self) ]
+]
+
 { #category : #accessing }
 StMobilTrip >> legs [
 	^ legs
